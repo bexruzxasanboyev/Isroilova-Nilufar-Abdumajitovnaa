@@ -5,11 +5,331 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Isroilova Nilufar Abdumajitovna</title>
-    <link rel="stylesheet" href="./css/modal.css">
+
     <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; } html, body { overflow-x: hidden; } body { font-family: Inter, sans-serif; background-color: #F7ECE2; } .hero { padding-top: 0; padding-bottom: 31px; } .hero__container { max-width: 400px; margin: 0 auto; padding: 0 8px; position: relative; } .hero__meta { display: flex; align-items: center; justify-content: space-between; border-radius: 0 0 20px 20px; margin-bottom: 16px; padding: 16px 20px; background-color: white; } .hero__meta-item { display: flex; align-items: center; gap: 4px; } .hero__meta-item p { font-family: Inte, sans-serif; font-weight: 400; font-size: 18px; line-height: 100%; text-align: center; } .hero__title { font-family: Inter, sans-serif; font-weight: 800; font-size: clamp(38px, 11vw, 42px); line-height: 120%; text-align: center; color: #2D2219; margin-bottom: 4px; } .hero__description { font-family: Inter, sans-serif; font-weight: 400; font-size: 16px; line-height: 130%; text-align: center; color: #5B4C43; margin-bottom: 26px; } .hero__content { position: relative; margin-left: 10px; } .hero__info { z-index: 30; position: relative; } .hero__subtitle { font-family: "SF Pro Display", sans-serif; font-weight: 700; font-size: 14px; line-height: 130%; position: relative; color: #CE9567; margin-bottom: 4px; } .hero__list { display: flex; flex-direction: column; gap: 8px; margin-bottom: 16px; } .hero__list-item { background-color: #FFFFFF80; border-radius: 10px; max-width: 260px; width: 100%; padding: 11px 8px; list-style: none; font-family: "SF Pro Display", sans-serif; font-weight: 400; font-size: clamp(11.5px, 3svw, 14px); line-height: 130%; color: #2D2219; } .hero__image { max-width: 257px; width: 100%; height: auto; position: absolute; top: 0; right: -70px; z-index: 30 } .speaker__bg { max-width: 155px; width: 100%; height: 155px; background-color: #CE9567; margin: 0 auto; position: absolute; right: -20px; bottom: 30px; filter: blur(50px) } .gradient { background: linear-gradient(180deg, rgba(247, 236, 226, 0) 0%, #F7ECE2 100%); max-width: 390px; width: 100%; z-index: 29; height: 119px; position: absolute; bottom: -39px; right: -80px; } .hero__button { max-width: 335px; width: 100%; border-radius: 50px; position: relative; font-family: Inter, sans-serif; color: white; box-shadow: 0px 4px 0px 0px #AD6C41; font-weight: 700; margin-left: auto; margin-right: auto; font-size: 22px; line-height: 100%; letter-spacing: 2%; text-align: center; text-transform: uppercase; z-index: 30; justify-content: center; padding: 31px 0; background: linear-gradient(90deg, #D79B6D 0%, #C97E4D 100%); border: none; cursor: pointer; margin-bottom: 24px; display: flex; align-items: center; gap: 8px; border-radius: 50px; } .countdown-promo { max-width: 311px; border-radius: 20px; border: 1px dashed #AD6C41; padding: 15px; margin: 0 auto; position: relative; margin-bottom: 25px; } .countdown-promo__left { position: absolute; left: -2%; top: -2%; } .countdown-promo__right { position: absolute; top: clamp(50%, 4vw, 40%); right: -5%; width: clamp(30px, 11vw, 41px); height: auto; } .countdown-promo__urgency-text { font-family: Inter, sans-serif; font-weight: 700; font-size: clamp(14px, 4vw, 16px); line-height: 120%; margin-bottom: 8px; text-align: center; } .countdown-promo__warning-text { font-family: Inter, sans-serif; font-weight: 400; text-align: center; font-size: 13px; line-height: 120%; margin-bottom: 15px; } .timer { display: flex; align-items: center; justify-content: center; gap: 2px; margin-bottom: 12px; } .timer__segment { background-color: #CE9567; max-width: 39px; width: 100%; height: 30px; border-radius: 10px; display: flex; align-items: center; justify-content: center; } .timer__value { color: white; font-weight: 700; font-size: 22px; line-height: 120%; } .timer__separator { font-size: 22px; } .thought__title { font-family: Inter, sans-serif; font-weight: 800; font-size: 32px; line-height: 120%; text-align: center; text-transform: uppercase; color: #2D2219; margin-bottom: 15px; } .thought__slider { position: relative; max-width: 252px; margin: 0 auto; } .thought__track { overflow: hidden; border-radius: 20px; } .thought__slides { display: flex; transition: transform .35s ease; will-change: transform; } .thought__slide { flex: 0 0 100%; display: block; height: auto; width: 100%; cursor: pointer; } .thought__nav { position: absolute; top: 50%; transform: translateY(-50%); width: 30px; height: 30px; border-radius: 50%; border: none; background: #CA804F; color: white; font-size: 20px; line-height: 1; cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 2; } .thought__nav--prev { left: -50px; } .thought__nav--next { right: -50px; } @media (max-width:340px) { .hero__image { right: -100px; } .thought__nav--next { right: -33px; } .thought__nav--prev { left: -33px; } }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html,
+        body {
+            overflow-x: hidden;
+        }
+        
+        body {
+            font-family: Inter, sans-serif;
+            background-color: #F7ECE2;
+        }
+        
+        .hero {
+            padding-top: 0;
+            padding-bottom: 31px;
+        }
+        
+        .hero__container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 0 8px;
+            position: relative;
+        }
+        
+        .hero__meta {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-radius: 0 0 20px 20px;
+            margin-bottom: 16px;
+            padding: 16px 20px;
+            background-color: white;
+        }
+        
+        .hero__meta-item {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        
+        .hero__meta-item p {
+            font-family: Inte, sans-serif;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 100%;
+            text-align: center;
+        }
+        
+        .hero__title {
+            font-family: Inter, sans-serif;
+            font-weight: 800;
+            font-size: clamp(38px, 11vw, 42px);
+            line-height: 120%;
+            text-align: center;
+            color: #2D2219;
+            margin-bottom: 4px;
+        }
+        
+        .hero__description {
+            font-family: Inter, sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 130%;
+            text-align: center;
+            color: #5B4C43;
+            margin-bottom: 26px;
+        }
+        
+        .hero__content {
+            position: relative;
+            margin-left: 10px;
+        }
+        
+        .hero__info {
+            z-index: 30;
+            position: relative;
+        }
+        
+        .hero__subtitle {
+            font-family: "SF Pro Display", sans-serif;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 130%;
+            position: relative;
+            color: #CE9567;
+            margin-bottom: 4px;
+        }
+        
+        .hero__list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+        
+        .hero__list-item {
+            background-color: #FFFFFF80;
+            border-radius: 10px;
+            max-width: 260px;
+            width: 100%;
+            padding: 11px 8px;
+            list-style: none;
+            font-family: "SF Pro Display", sans-serif;
+            font-weight: 400;
+            font-size: clamp(11.5px, 3svw, 14px);
+            line-height: 130%;
+            color: #2D2219;
+        }
+        
+        .hero__image {
+            max-width: 257px;
+            width: 100%;
+            height: auto;
+            position: absolute;
+            top: 0;
+            right: -70px;
+            z-index: 30
+        }
+        
+        .speaker__bg {
+            max-width: 155px;
+            width: 100%;
+            height: 155px;
+            background-color: #CE9567;
+            margin: 0 auto;
+            position: absolute;
+            right: -20px;
+            bottom: 30px;
+            filter: blur(50px)
+        }
+        
+        .gradient {
+            background: linear-gradient(180deg, rgba(247, 236, 226, 0) 0%, #F7ECE2 100%);
+            max-width: 390px;
+            width: 100%;
+            z-index: 29;
+            height: 119px;
+            position: absolute;
+            bottom: -39px;
+            right: -80px;
+        }
+        
+        .hero__button {
+            max-width: 335px;
+            width: 100%;
+            border-radius: 50px;
+            position: relative;
+            font-family: Inter, sans-serif;
+            color: white;
+            box-shadow: 0px 4px 0px 0px #AD6C41;
+            font-weight: 700;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 22px;
+            line-height: 100%;
+            letter-spacing: 2%;
+            text-align: center;
+            text-transform: uppercase;
+            z-index: 30;
+            justify-content: center;
+            padding: 31px 0;
+            background: linear-gradient(90deg, #D79B6D 0%, #C97E4D 100%);
+            border: none;
+            cursor: pointer;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border-radius: 50px;
+        }
+        
+        .countdown-promo {
+            max-width: 311px;
+            border-radius: 20px;
+            border: 1px dashed #AD6C41;
+            padding: 15px;
+            margin: 0 auto;
+            position: relative;
+            margin-bottom: 25px;
+        }
+        
+        .countdown-promo__left {
+            position: absolute;
+            left: -2%;
+            top: -2%;
+        }
+        
+        .countdown-promo__right {
+            position: absolute;
+            top: clamp(50%, 4vw, 40%);
+            right: -5%;
+            width: clamp(30px, 11vw, 41px);
+            height: auto;
+        }
+        
+        .countdown-promo__urgency-text {
+            font-family: Inter, sans-serif;
+            font-weight: 700;
+            font-size: clamp(14px, 4vw, 16px);
+            line-height: 120%;
+            margin-bottom: 8px;
+            text-align: center;
+        }
+        
+        .countdown-promo__warning-text {
+            font-family: Inter, sans-serif;
+            font-weight: 400;
+            text-align: center;
+            font-size: 13px;
+            line-height: 120%;
+            margin-bottom: 15px;
+        }
+        
+        .timer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2px;
+            margin-bottom: 12px;
+        }
+        
+        .timer__segment {
+            background-color: #CE9567;
+            max-width: 39px;
+            width: 100%;
+            height: 30px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .timer__value {
+            color: white;
+            font-weight: 700;
+            font-size: 22px;
+            line-height: 120%;
+        }
+        
+        .timer__separator {
+            font-size: 22px;
+        }
+        
+        .thought__title {
+            font-family: Inter, sans-serif;
+            font-weight: 800;
+            font-size: 32px;
+            line-height: 120%;
+            text-align: center;
+            text-transform: uppercase;
+            color: #2D2219;
+            margin-bottom: 15px;
+        }
+        
+        .thought__slider {
+            position: relative;
+            max-width: 252px;
+            margin: 0 auto;
+        }
+        
+        .thought__track {
+            overflow: hidden;
+            border-radius: 20px;
+        }
+        
+        .thought__slides {
+            display: flex;
+            transition: transform .35s ease;
+            will-change: transform;
+        }
+        
+        .thought__slide {
+            flex: 0 0 100%;
+            display: block;
+            height: auto;
+            width: 100%;
+            cursor: pointer;
+        }
+        
+        .thought__nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            border: none;
+            background: #CA804F;
+            color: white;
+            font-size: 20px;
+            line-height: 1;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2;
+        }
+        
+        .thought__nav--prev {
+            left: -50px;
+        }
+        
+        .thought__nav--next {
+            right: -50px;
+        }
+        
+        @media (max-width:340px) {
+            .hero__image {
+                right: -100px;
+            }
+            .thought__nav--next {
+                right: -33px;
+            }
+            .thought__nav--prev {
+                left: -33px;
+            }
+        }
     </style>
-     <link rel="stylesheet" href="./css/modal.css" media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="./css/modal.css" media="print" onload="this.media='all'" />
     <noscript>
         <link rel="stylesheet" href="./css/modal.css" />
     </noscript>
@@ -31,11 +351,10 @@
                     </div>
                 </div>
 
-                <h1 class="hero__title">DEFEKTOLOGIK <br>
-                    DIAGNOSTIKA</h1>
+                <h1 class="hero__title">DEFEKTOLOGIK <br> DIAGNOSTIKA
+                </h1>
                 <p class="hero__description">Autizm, ZPR va nutq kechikishini <br> to‘g‘ri aniqlashni <b>15 yillik
-                        tajribaga <br> ega</b>
-                    mutaxassisdan o‘rganing!</p>
+                        tajribaga <br> ega</b> mutaxassisdan o‘rganing!</p>
 
                 <div class="hero__content">
                     <div class="hero__info">
@@ -44,19 +363,14 @@
                             <li class="hero__list-item">
                                 <b> - Defektologik diagnostikani</b> qanday <br> qilib to'g'ri va samarali olib borishni
                             </li>
-                            <li class="hero__list-item" style="max-width: 215px; width: 100%;"><b>- Autizm va ZPR'ni</b>
-                                bir biridan <br> chuqurroq farqlashni
+                            <li class="hero__list-item" style="max-width: 215px; width: 100%;"><b>- Autizm va ZPR'ni</b> bir biridan <br> chuqurroq farqlashni
                             </li>
                             <li class="hero__list-item" style="max-width: 215px; width: 100%;"><b>- Inclyuziv
-                                    ta'limda</b> bola bilan <br> qanaday qilib ish
-                                olib
-                                borish
+                                    ta'limda</b> bola bilan <br> qanaday qilib ish olib borish
                             </li>
                             <li class="hero__list-item" style="max-width: 215px; width: 100%;"><b>- Bolada nutq
-                                    kechikishi,</b> <br> Sensor integratsiya, ZRR,
-                                ZPR,
-                                <br> Autizm'larga
-                                chuqur kiramiz
+                                    kechikishi,</b> <br> Sensor integratsiya, ZRR, ZPR,
+                                <br> Autizm'larga chuqur kiramiz
                             </li>
                         </ul>
                     </div>
@@ -72,10 +386,8 @@
 
 
                 <div class="countdown-promo">
-                    <img class="countdown-promo__left" src="./images/qumsoat.avif" alt="timer" loading="lazy"
-                        decoding="async" width="40" height="50">
-                    <img class="countdown-promo__right" src="./images/olov.avif" alt="molniya" loading="lazy"
-                        decoding="async" width="41" height="54">
+                    <img class="countdown-promo__left" src="./images/qumsoat.avif" alt="timer" loading="lazy" decoding="async" width="40" height="50">
+                    <img class="countdown-promo__right" src="./images/olov.avif" alt="molniya" loading="lazy" decoding="async" width="41" height="54">
                     <p class="countdown-promo__urgency-text">JOYLAR SONI OZ QOLDI!</p>
 
 
@@ -98,16 +410,11 @@
                         <button class="thought__nav thought__nav--prev" type="button" aria-label="Oldingi">‹</button>
                         <div class="thought__track">
                             <div class="thought__slides">
-                                <img class="thought__slide" src="./images/thought.avif" width="252" height="312"
-                                    alt="O'quvchi fikri 1" loading="lazy" decoding="async">
-                                <img class="thought__slide" src="./images/thought.avif" width="252" height="312"
-                                    alt="O'quvchi fikri 2" loading="lazy" decoding="async">
-                                <img class="thought__slide" src="./images/thought.avif" width="252" height="312"
-                                    alt="O'quvchi fikri 3" loading="lazy" decoding="async">
-                                <img class="thought__slide" src="./images/thought.avif" width="252" height="312"
-                                    alt="O'quvchi fikri 3" loading="lazy" decoding="async">
-                                <img class="thought__slide" src="./images/thought.avif" width="252" height="312"
-                                    alt="O'quvchi fikri 3" loading="lazy" decoding="async">
+                                <img class="thought__slide" src="./images/thought.avif" width="252" height="312" alt="O'quvchi fikri 1" loading="lazy" decoding="async">
+                                <img class="thought__slide" src="./images/thought.avif" width="252" height="312" alt="O'quvchi fikri 2" loading="lazy" decoding="async">
+                                <img class="thought__slide" src="./images/thought.avif" width="252" height="312" alt="O'quvchi fikri 3" loading="lazy" decoding="async">
+                                <img class="thought__slide" src="./images/thought.avif" width="252" height="312" alt="O'quvchi fikri 3" loading="lazy" decoding="async">
+                                <img class="thought__slide" src="./images/thought.avif" width="252" height="312" alt="O'quvchi fikri 3" loading="lazy" decoding="async">
                             </div>
                         </div>
                         <button class="thought__nav thought__nav--next" type="button" aria-label="Keyingi">›</button>
@@ -136,8 +443,7 @@
             <form id="registrationForm" name="contact-form">
                 <div class="HomeFormRow">
                     <label class="HomeFormRowLabel" for="name">Ismingiz:</label>
-                    <input class="HomeFormRowInput" type="text" id="name" name="name" placeholder="Ismingizni kiriting"
-                        autocomplete="name" />
+                    <input class="HomeFormRowInput" type="text" id="name" name="name" placeholder="Ismingizni kiriting" autocomplete="name" />
                     <p class="homeFormErrorText" id="nameError" style="display: none">❌ Ismingizni kiriting!</p>
                 </div>
 
@@ -155,9 +461,7 @@
                         </button>
                         <div class="country-dropdown" id="countryDropdown" style="display:none"></div>
                         <div class="phone-field" style="flex: 1;">
-                            <input class="HomeFormRowInput phone-input" type="tel" id="phone" name="phone"
-                                inputmode="numeric" placeholder="88 888 88 88" autocomplete="tel"
-                                style="border: none; background-color: transparent; padding-left: 5px; width: 100%;" />
+                            <input class="HomeFormRowInput phone-input" type="tel" id="phone" name="phone" inputmode="numeric" placeholder="88 888 88 88" autocomplete="tel" style="border: none; background-color: transparent; padding-left: 5px; width: 100%;" />
                         </div>
                     </div>
                     <p class="homeFormErrorText" id="phoneError" style="display:none">❌ Telefon raqam mos emas!</p>
