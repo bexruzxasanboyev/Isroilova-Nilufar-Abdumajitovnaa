@@ -191,7 +191,7 @@
   </div>
 
    <script defer>
-      !function(){var t=document.querySelector(".slider-container");function e(){var t=document.createElement("script");t.src="https://fast.wistia.com/player.js",t.async=!0,document.head.appendChild(t)}if(!t||!("IntersectionObserver"in window))return void e();var n=new IntersectionObserver(function(t){t.forEach(function(t){t.isIntersecting&&(e(),n.disconnect())})},{rootMargin:"300px"});n.observe(t)}();
+      !function(){function e(){var t=document.createElement("script");t.src="https://fast.wistia.com/player.js",t.async=!0,document.head.appendChild(t)}function t(){setTimeout(e,2e3)}"complete"===document.readyState||"interactive"===document.readyState?t():window.addEventListener("DOMContentLoaded",t)}();
     </script>
 
   <script defer src="/js/phoneFormatter.js"></script>
