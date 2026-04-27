@@ -380,6 +380,30 @@
     <script defer src="./js/app.js"></script>
     <script defer src="./js/phoneFormatter.js"></script>
 
+    <script>
+        (function () {
+            var el = document.getElementById('timer');
+            if (!el) return;
+            var totalSeconds = 2 * 60;
+            function render() {
+                var m = Math.floor(totalSeconds / 60);
+                var s = totalSeconds % 60;
+                el.textContent = (m < 10 ? '0' + m : m) + ':' + (s < 10 ? '0' + s : s);
+            }
+            render();
+            var id = setInterval(function () {
+                totalSeconds--;
+                if (totalSeconds <= 0) {
+                    totalSeconds = 0;
+                    render();
+                    clearInterval(id);
+                    return;
+                }
+                render();
+            }, 1000);
+        })();
+    </script>
+
 </body>
 
 </html>
