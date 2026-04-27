@@ -1,0 +1,450 @@
+@font-face {
+    font-family: "Italianno";
+    src: url("../font/Italianno-Regular-subset-apos.woff2") format("woff2");
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Forum";
+    src: url("../font/Forum-Regular-optimized.woff2") format("woff2");
+    font-weight: 400;
+    font-display: swap;
+}
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+.webinar-heading2 {
+    font: 400 clamp(23px, 6.9vw, 34px) / 100% "Forum", sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 17px;
+}
+
+.webinar-section {
+    padding-top: 26px;
+    padding-bottom: 51px;
+}
+
+.webinar-learn__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.webinar-learn__list {
+    display: flex;
+    flex-direction: column;
+    gap: 38px;
+    max-width: 324px;
+    width: 100%;
+    margin-bottom: 10px;
+    padding-top: 18px;
+    list-style: none;
+}
+
+.webinar-learn__list__item {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 34px 21px 24px 21px;
+    color: #000;
+    text-align: center;
+    position: relative;
+}
+
+.webinar-learn__list__item__number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+   background: linear-gradient(161.24deg, #A40000 0%, #6A0000 100%);
+    border-radius: 8px;
+    font: 600 20px/100% Inter, sans-serif;
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    top: -17px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.webinar-learn__list__item__text span {
+    font-weight: 600;
+    color: #A40000;
+}
+
+.webinar-learn__list__item__text {
+    font: 400 clamp(14.5px, 4.5vw, 16px)/130% Inter, sans-serif;
+    text-align: center;
+}
+
+.webinar-learn__bonus {
+    max-width: 346px;
+    width: 100%;
+    background: linear-gradient(117.55deg, #B73535 5.6%, #500505 95.64%);
+    border: 1px solid #FFFFFF;
+    border-radius: 20px;
+    color: white;
+    padding: 10px 0;
+
+    text-align: center;
+    margin: 0 auto;
+}
+
+.webinar-learn__bonus__text {
+    font: 500 18px / 130% Inter, sans-serif;
+    margin-bottom: 5px;
+}
+
+.webinar-learn__bonus__timer {
+    font: 700 32px/130% Inter, sans-serif;
+}
+
+.learn__arrow {
+    margin: 15px auto;
+}
+
+.slider-container {
+    width: 100%; /* Ko'rinadigan qism kengligi */
+    overflow: hidden; /* Tashqariga chiqqan rasmlarni yashiradi */
+}
+
+.slider-track {
+    display: flex;
+    gap: 20px;
+    width: calc(250px * 8); /* Har bir rasm kengligi * rasmlar soni */
+    animation: scroll 20s linear infinite; /* 20 sekundda bir aylanadi */
+}
+
+.slider-track img {
+    width: 250px; /* Rasmlarning bir xil kengligi */
+    height: auto;
+}
+
+/* Animatsiya logikasi */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        /* Rasmlarning yarmi o'tganda (4 ta rasm) boshiga qaytaradi */
+        transform: translateX(calc(-250px * 4)); 
+    }
+}
+
+/* Sichqoncha ustiga borganda to'xtashi uchun (ixtiyoriy) */
+.slider-container:hover .slider-track {
+    animation-play-state: paused;
+}
+
+.homeModal,
+.homeModalOverlay {
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    left: 0;
+}
+
+.homeModal {
+    z-index: 30;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.homeModalOverlay {
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+}
+
+.homeFormContainer {
+    position: relative;
+    z-index: 30;
+    background-color: #fff;
+    color: #000;
+    border-radius: 8px;
+    padding: 20px 40px 40px;
+    width: 100%;
+    max-width: 520px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin: 0 20px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.homeFormTop {
+    display: flex;
+    justify-content: space-between;
+}
+
+.homeFormTopTitle {
+    font-family: Inter, sans-serif;
+    font-size: clamp(21px, 6.6vw, 24px);
+    margin: 0 0 20px;
+    color: #000;
+    font-weight: 600;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.closeButton {
+    background: 0 0;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #000;
+}
+
+.homeFormErrorText {
+    color: #e53e3e;
+    margin-bottom: 12px;
+    font-size: 14px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.HomeFormRowInput,
+.HomeFormRowLabel {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 18px;
+}
+
+.HomeFormRow {
+    margin-bottom: 20px;
+}
+
+.HomeFormRowLabel {
+    display: block;
+    margin-bottom: 6px;
+    color: #000;
+}
+
+.HomeFormRowInput {
+    width: 100%;
+    padding: 10px 16px;
+    border: 1px solid #c9c9c9;
+    min-height: 48px;
+    background-color: #f3f7f8;
+    border-radius: 6px;
+    font-weight: 400;
+    outline: 0;
+    height: 50px;
+    transition: border-color 0.2s;
+}
+
+.HomeFormRowInput:focus {
+    border-color: #3757AD;
+}
+
+.HomeFormRowInput::placeholder {
+    color: #aaa;
+}
+
+.HomeFormBtn {
+    font-family: sans-serif;
+    height: 60px;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #3757AD 0%, #517EF6 53.85%, #3757AD 100%);
+    transition: 0.3s;
+    font-weight: 700;
+    font-size: 28px;
+    color: white;
+    text-transform: uppercase;
+    border: none;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.phone-input-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    border: 1px solid #c9c9c9;
+    background-color: transparent;
+    border-radius: 6px;
+}
+
+.phone-input-container:focus {
+    border-color: #e71f1f;
+}
+
+.selected-code {
+    display: flex;
+    margin-left: 10px;
+}
+
+.country-selector {
+    position: relative;
+    margin-right: 10px;
+}
+
+.selected-country {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    padding-right: 0;
+    border-radius: 6px;
+    cursor: pointer;
+    min-height: 50px;
+    font-family: sans-serif !important;
+    font-size: 18px;
+    font-weight: 400 !important;
+    min-width: max-content;
+    border: none;
+    background-color: transparent;
+}
+
+.country-dropdown {
+    position: absolute;
+    top: 110%;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #c9c9c9;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 40;
+    max-height: 200px;
+    overflow-y: auto;
+    font-family: sans-serif !important;
+    font-weight: 400 !important;
+}
+
+.country-option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    font-family: sans-serif;
+    font-weight: 400 !important;
+}
+
+.country-option:hover {
+    background-color: #f3f7f8;
+}
+
+.country-option.selected {
+    background-color: #e6f0fa;
+}
+
+@media screen and (max-width: 768px) {
+    .homeFormContainer {
+        max-width: 100%;
+        padding: 80px 20px 20px;
+        margin: 0;
+        border-radius: 6px;
+        height: 100vh;
+    }
+
+    .homeFormTopTitle {
+        text-align: center;
+        max-width: 408px;
+        margin-left: auto;
+        margin-right: auto;
+        font-weight: 700;
+        margin-bottom: 15px;
+    }
+
+    .homeFormTop {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .closeButton {
+        width: 100%;
+        height: 50px;
+        background-color: #000;
+        color: #fff;
+        padding-right: 20px;
+        top: 0;
+        left: 0;
+        justify-content: end;
+    }
+
+    .homeFormErrorText {
+        font-size: 12px;
+        margin-bottom: 8px;
+    }
+
+    .HomeFormRowLabel {
+        margin-bottom: 6px;
+    }
+
+    .HomeFormRowInput {
+        padding: 0 12px;
+        min-height: 40px;
+        background-color: transparent;
+    }
+
+    .HomeFormRowInput::placeholder {
+        color: #a3a3a3;
+    }
+
+    .HomeFormBtn {
+        font-size: 18px;
+        font-weight: 700;
+        margin-top: 24px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .homeFormContainer {
+        max-width: 100%;
+        padding: 80px 20px 20px;
+        margin: 0;
+        border-radius: 6px;
+        height: 100vh;
+    }
+
+    .homeFormTopTitle {
+        text-align: center;
+        margin: 0 auto 15px;
+    }
+
+    .homeFormErrorText {
+        font-size: 12px;
+        margin-bottom: 8px;
+    }
+
+    .HomeFormRowLabel {
+        margin-bottom: 6px;
+    }
+
+    .HomeFormRowInput {
+        padding: 0 12px;
+        min-height: 40px;
+        background-color: transparent;
+        border-radius: 10px;
+    }
+
+    .HomeFormRowInput::placeholder {
+        color: #a3a3a3;
+    }
+
+    .HomeFormBtn {
+        font-size: 16px;
+        padding: 10px 0;
+        margin-top: 24px;
+        height: 50px;
+    }
+}
